@@ -108,17 +108,17 @@ $$H=\left[
 观测模型误差协方差：
 $$R=\left[
 \begin{matrix}
- 0.0001 & 0 \\
- 0 & 0.0001 \\
+ 0.0001 & 0 \\\\
+ 0 & 0.0001 \\\\
 \end{matrix}
 \right]$$
-轨迹预测观测步长：$/tau=30$
-轨迹预测长度：$L=150$
+轨迹预测观测步长：$ /tau=30 $
+轨迹预测长度：$ L=150 $
 gif    
 ### Hierarchical Framework
 #### meta-controller
 - 状态:
-$$s={G_{dir}, G_{dis}, v, \omega, L}$$
+$$s=[G_{dir}, G_{dis}, v, \omega, L]$$
 - 动作：
 $$a=p_{goal}$$
 - 奖励：
@@ -131,9 +131,9 @@ $$
 
 #### controller
 - 状态:
-$$s={g_{dir}, g_{dis}, v, \omega, L}$$
+$$s=[g_{dir}, g_{dis}, v, \omega, L]$$
 - 动作：
-$$a={v_{left}, v_{right}}$$
+$$a=[v_{left}, v_{right}]$$
 - 奖励：
 $$R=\begin{cases}
   R_{goal}, & g_{dis}<G_{th} \\\\
