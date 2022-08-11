@@ -79,7 +79,7 @@ $$X_{k}=[x, v_{x}, y, v_{y}, a_{x}, a_{y}]^{T}$$
 预测模型——恒加速度模型：
 $$X_{k+1}=$$
 
-$$ {\left\lbrack \matrix{2 & 3 \cr 4 & 5} \right\rbrack}$$
+$$ {\left \matrix{2 & 3 \cr 4 & 5} \right}$$
 \begin{bmatrix}
  1 & dt & 0 & 0 & 0.5dt^{2} & 0 \\\\
  0 & 1 & 0 & 0 & dt & 0 \\\\
