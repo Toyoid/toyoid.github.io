@@ -116,7 +116,7 @@ $$R=\left[
 轨迹预测长度：$ L=150 $
 gif    
 ### Hierarchical Framework
-#### meta-controller
+#### Meta-controller
 - 状态:
 $$s=[G_{dir}, G_{dis}, v, \omega, L]$$
 - 动作：
@@ -129,7 +129,7 @@ $$R=\begin{cases}
 \end{cases}
 $$
 
-#### controller
+#### Controller
 - 状态:
 $$s=[g_{dir}, g_{dis}, v, \omega, L]$$
 - 动作：
