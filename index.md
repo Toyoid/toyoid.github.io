@@ -1,9 +1,3 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Toyoid/toyoid.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ## 目标在障碍物之间的行走策略: RRT-based Random Walk
 问题：一个机器人需要依赖于某种策略，在障碍物分布较为密集且地图未知的场景中，对一个在二维空间内自由移动的目标
 实现在 时间/距离 方面较为高效的导航。机器人所能获得的信息除了自身状态数据外，只有激光雷达测距数据，以及导航
@@ -62,11 +56,11 @@ gif
 #### Brief Intro to Kalman Filter
 Kalman Filter 本身是一种解决数据融合问题的算法，用于融合预测数据和观测数据。对于某一系统的状态数据
 $X_{0},X_{1},...,X_{n}$，我们能根据系统的物理特性，建立预测模型，得到在 $k$ 时刻的系统状态的预测值：
-$$X_{k}^{-}=AX_{k-1}+B\mu_{k-1}+\omega_{k-1} P(\omega)\sim N(0, Q) $$
+$$X_{k}^{-}=AX_{k-1}+B\mu_{k-1}+\omega_{k-1},  P(\omega)\sim N(0, Q) $$
 预测模型必然存在误差，用服从高斯分布的 $\omega_{k-1}$ 表示，Q 为协方差矩阵。  
 除 $X_{k}$ 的预测值外，我们还可通过传感器在 $k$ 时刻对真实值进行测量，得到测量值 $Z_{k}$，$Z_{k}$ 经
 过观测模型即可得到对系统状态 $X_{k}$ 的观测值：
-$$Z_{k}=HX_{k}+\nu_{k} （对 X 的测量值）P(\nu)\sim N(0, R)$$
+$$Z_{k}=HX_{k}+\nu_{k},  P(\nu)\sim N(0, R)$$
 观测模型也必然存在误差，因此也用服从高斯分布的 $\nu$ 表示，R 为协方差矩阵。  
 有了 $X_{k}$ 的预测值和测量值，我们就可以对 $X_{k}$ 的真实值给出最优估计，使得最终的估计值比预测值误差和
 测量值误差都小，且在理论上达到最小，Kalman Filter 的融合公式如下：  
@@ -114,8 +108,8 @@ $$H=\left[
 观测模型误差协方差：
 $$R=\left[
 \begin{matrix}
- 0.0001 & 0 \\\\
- 0 & 0.0001 \\\\
+ 0.0001 & 0 \\
+ 0 & 0.0001 \\
 \end{matrix}
 \right]$$
 轨迹预测观测步长：$/tau=30$
